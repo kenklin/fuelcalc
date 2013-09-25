@@ -1,0 +1,58 @@
+
+<!-- saved from url=(0035)http://p1software.com/fuelcalc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Fuel Weight</title>
+<script type="text/javascript">
+function fuelcalc() {
+  var gal = parseFloat(document.getElementById("Gallons").value);
+  var dens = parseFloat(document.getElementById("Density").value);
+  var lbs = Math.floor(gal * dens);
+  var oz = Math.floor((gal * dens - lbs) * 16);
+  var totaloz = Math.floor(gal * dens * 16);
+  document.getElementById("Pounds").value = lbs;
+  document.getElementById("Ounces").value = oz;
+  document.getElementById("TotalOunces").value = totaloz;
+}
+</script>
+</head>
+<body>
+<table>
+<tbody><tr>
+<td>
+Gallons of Fuel: <input type="text" id="Gallons" size="5" value="7.05">
+</td>
+</tr>
+<tr>
+<td>
+Density of Fuel (gallons/lb): <input type="text" id="Density" size="5" value="6.3125">
+</td>
+</tr>
+<tr>
+<td>
+<input onclick="fuelcalc()" type="button" value="Calculate">
+</td>
+</tr>
+<tr>
+<th>
+Weight
+</th>
+</tr>
+<tr>
+<td>
+Pounds: <input type="text" id="Pounds" size="5">
+</td>
+</tr>
+<tr>
+<td>
+Ounces: <input type="text" id="Ounces" size="5">
+</td>
+</tr>
+<tr>
+<td>
+Total Ounces: <input type="text" id="TotalOunces" size="5">
+</td>
+</tr>
+</tbody></table>
+
+
+</body></html>
